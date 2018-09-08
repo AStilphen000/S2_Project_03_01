@@ -1,21 +1,24 @@
 @charset "utf-8";
-/*Here i set the charset to utf-8,which is the character encding for the website we're building.*/
+/*Here I set the charset to utf-8,which is the character encding for the website we're building.*/
 
-/*Here i used font-face to put the font families in and i also had to put the source and url because we're getting it from a different website. */
+/*Here I used font-face to put the font families in and I also had to put the source and url because we're getting it from a different website. */
 @font-face {
     font-family: Champagne;
     src: url('cac_champagne.woff') format('woff'),
-    url('cac_champagne.ttf') format('trutype');    
-
-    font-family: Grunge; 
-    src: url('1942.woff') format('woff'),
-    url('1942.ttf') format('trutype');
-
-    font-family: Dobkin;
-    src: url('DobkinPlain.woff'),
-    url('DobkinPlain.ttf');
+    url('cac_champagne.ttf') format('ttf');    
 }
 
+@font-face {  
+    font-family: Grunge; 
+    src: url('1942.woff') format('woff'),
+    url('1942.ttf') format('ttf');
+}
+
+@font-face {  
+    font-family: Dobkin;
+    src: url('DobkinPlain.woff') format(woff),
+    url('DobkinPlain.ttf') format(ttf);
+}
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
@@ -31,12 +34,14 @@
 
 
 /* Structural Styles */
+
+/*In structural styles I had to set the back colors and the fonts i also had to change margins and paddings. The I changed some font size and how the text aligned.*/
 html {
     background-color: hsl(91, 8%, 56%);
 }
 body {
     background-color: hsl(58, 31%, 84%);
-    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 header {
     background-color: black;
@@ -59,17 +64,79 @@ address {
 
 
 /* Navigation Styles */
-nav>a {
-    
 
+/*In the nav styles I needed to nest the anctor into the nav and had to change the colors and the padding, I also had to put hypertext links and in those links that were visted i needed to change the color and the line underneath the liks to none. */
+nav a {
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+nav a:link,
+nav a:visited {
+    color: white;
+    text-decoration: none;
+    background-color: hsla(0, 0%, 42%, 0.4);
+}
 
+nav>ul>li>a:active,
+nav>ul>li>a:hover {
+    color: hsla(0, 0%, 42%, 0.4);
+    background-color: hsla(0, 0%, 42%, 0.7);
+}
 
 /* Section Styles */
 
+/*In the section styles I had to put a section element to change the playbill, also the headings of the playbills. */
+section.playbill h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 20px 0px 10px 0px;
+}
+
+#play1 {
+    background-color: hsl(240, 100%, 88%);  
+    
+}
+
+#play1 h1 {
+    font-family: Champagne, cursive;
+}
+
+#play2 {
+    background-color: hsl(25, 88%, 73%);
+    
+}
+
+#play2 h1 {
+    
+    font-family: Grunge, Times New Roman, Times, serif; 
+}
+
+section#play3 {
+    background-color: hsl(0, 100%, 75%);
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+section#play4 {
+    background-color: hsl(296, 86%, 86%);
+    font-family: Dobkin, cursive;
+}
 
 
 
 /* Description List Styles */
 
+/*In the descrition list I needed to change some of the descrition details (dd), and the descrtion term (dt). The things I changed were just the font size, font weight, margins, and color.*/
+dt {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+dd {
+    font-size: 1.3em;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
